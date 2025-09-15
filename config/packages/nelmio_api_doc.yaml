@@ -1,0 +1,19 @@
+nelmio_api_doc:
+    documentation:
+        info:
+            title: Quai Antique doc
+            description: Documentation de l'Api Restaurant Quai Antique
+            version: 1.0.0
+        components:
+                securitySchemes:
+                  X-AUTH-TOKEN:
+                    type: apiKey
+                    name: X-AUTH-TOKEN
+                    in: header
+        security:
+           - X-AUTH-TOKEN: [ ]
+
+
+    areas: # to filter documented areas
+        path_patterns:
+            - ^/api(?!/doc$) # Accepts routes under /api except /api/doc
